@@ -57,9 +57,10 @@ function App() {
           hostAppName: 'your dApp',
           hostLogoUrl: 'https://yourdapp.com/yourlogo.png',
           // swapAmount: '1500000000000000000', // 150 ETH in wei
-          swapAsset: 'ETH_*',
+          // swapAsset: 'ETH_*',
           userAddress: Accos,
           userEmailAddress: email?.toString(),
+          url: 'https://ri-widget-staging.firebaseapp.com/',
           // hostApiKey: 'key'
           
         })
@@ -116,7 +117,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1> RAMP NETWORK test environment</h1>
+        <h1> RAMP NETWORK staging: Goerli environment</h1>
        {/* <input type='text' onChange={handleChange}>Email ID </input> */}
        <div className='Magic'>
         <h5> STEP 1 : Connect MAGIC </h5>
@@ -131,6 +132,16 @@ function App() {
         <div className='logout'>
         <button onClick={logout}> LOGOUT MAGIC</button>
         </div>
+        <div> <h3>Workaround</h3><br></br>
+           You can make a test purchase without having to connect your own payment method (staging environments only): <br/>
+           <p><ol>
+          <li>Add a new payment method, select "Manual Bank Transfer" (switch country to any European country if your country doesn't have that option).</li><br/>
+         <li>You should be back to the confirmation screen with "Any currency account" manual bank transfer payment method selected.</li> <br/>
+         <li> Continue, the purchase will be created.</li><br/>
+        <li> Tick the box that says that you've transferred the funds and continue.</li> <br/>
+         <li>Open the transaction summary link.</li> <br/>
+         <li>Click the manual test release button at the bottom of the summary and wait a few moments until the confirmation is processed.</li> 
+          </ol></p></div>
       </header>
     </div>
   );
